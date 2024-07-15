@@ -1,67 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>TP Catalog</title>
 </head>
-
 <body>
     <div class="container">
         <div class="header" id="header">
             <header>
-                <span class="material-symbols-outlined left-icon">
-                    flutter_dash
-                </span>
-                <div class="search-bar-container">
-                    <div class="search-bar">
-                        <span class="material-symbols-outlined search-icon">
-                            search
+                <span class="material-symbols-outlined left-icon">flutter_dash</span>
+                <input type="checkbox" class="checkbox" id="chk">
+                <label class="label" for="chk">
+                    <i class="fas fa-moon">
+                        <span class="material-symbols-outlined">
+                            light_mode
                         </span>
-                        <input type="text" placeholder="Search...">
-                    </div>
-                </div>
-                <span class="material-symbols-outlined right-icon">
-                    account_circle
-                </span>
+                    </i>
+                    <i class="fas fa-sun">
+                        <span class="material-symbols-outlined">
+                            dark_mode
+                        </span>
+                    </i>
+                    <div class="ball"></div>
+                </label>
             </header>
         </div>
-        <div class="content" id="content">
-            <div class="filter">
-                <span class="material-symbols-outlined">
-                    filter_list
-                </span>
-            </div>
-            <div class="card">
-                <img src="https://firebasestorage.googleapis.com/v0/b/ifmg-2bfd6.appspot.com/o/Web%20I%2Fo-novo-poster-de-o-rei-leao-1557252821343_v2_1307x1920.jpg?alt=media&token=790eb10b-2b71-4f7d-b5a5-d9b610816220"
-                    alt="image-info" class="image-card">
-                <div class="card-info">
-                    <h2>Et aliquam voluptas non quos laudantium et culpa voluptate.</h2>
-                    <h4>Sed dolor repudiandae non blanditiis aliquid.</h4>
-                    <p>Lorem ipsum dolor sit amet. Id dolor deleniti et deleniti autem id animi natus. Est atque nobis
-                        aut vero libero At molestiae laborum et consequatur doloremque.</p>
-                </div>
-            </div>
-        </div>
+
+        <div class="content" id="content" ></div>
+        
         <div class="footer" id="footer">
             <footer>
                 <h3>Nam dolorem sint a voluptate illum.</h3>
-                <p>Ea doloribus ducimus est delectus doloribus.
-                    <br>
-                    Ad voluptas labore ut omnis possimus.
-                    <br>
+                <p>Ea doloribus ducimus est delectus doloribus.<br>Ad voluptas labore ut omnis possimus.<br>
                     <a href="https://www.instagram.com/luizfelipe_0401/?hl=pt-br" target="_blank">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/ifmg-2bfd6.appspot.com/o/Web%20I%2Finstagram.svg?alt=media&token=77912153-752e-40bc-bc8e-63723cd4e870"
-                            alt="instagram-logo">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/ifmg-2bfd6.appspot.com/o/Web%20I%2Finstagram.svg?alt=media&token=77912153-752e-40bc-bc8e-63723cd4e870" alt="instagram-logo">
                     </a>
                 </p>
             </footer>
         </div>
     </div>
+    <script src="./scripts/script.js"></script>
 </body>
-
 </html>

@@ -7,12 +7,40 @@ const arrCards = [
             "Lorem ipsum dolor sit amet. Id dolor deleniti et deleniti autem id animi natus. Est atque nobis aut vero libero At molestiae laborum et consequatur doloremque.",
     },
     {
-        imageUrl: "https://firebasestorage.googleapis.com/v0/b/ifmg-2bfd6.appspot.com/o/Web%20I%2FKTAsueIBr4Pcgcn8.mp4?alt=media&token=1f03538a-f875-4ff7-8d6a-f678f10d166e",
+        imageUrl: "https://firebasestorage.googleapis.com/v0/b/ifmg-2bfd6.appspot.com/o/Web%20I%2FVID-20191105-WA0185.mp4?alt=media&token=f553b732-5804-42be-8102-55fa6e9dfd17",
         title: "Et aliquam voluptas non quos laudantium et culpa voluptate.",
         subtitle: "Sed dolor repudiandae non blanditiis aliquid.",
         description:
             "Lorem ipsum dolor sit amet. Id dolor deleniti et deleniti autem id animi natus. Est atque nobis aut vero libero At molestiae laborum et consequatur doloremque.",
     },
+    {
+        imageUrl: "https://firebasestorage.googleapis.com/v0/b/ifmg-2bfd6.appspot.com/o/Web%20I%2Fanime_1709043377457.mp4?alt=media&token=b4b05ace-e0f5-4ba8-9114-c01e86801a66",
+        title: "Et aliquam voluptas non quos laudantium et culpa voluptate.",
+        subtitle: "Sed dolor repudiandae non blanditiis aliquid.",
+        description:
+            "Lorem ipsum dolor sit amet. Id dolor deleniti et deleniti autem id animi natus. Est atque nobis aut vero libero At molestiae laborum et consequatur doloremque.",
+    },
+    {
+        imageUrl: "https://firebasestorage.googleapis.com/v0/b/ifmg-2bfd6.appspot.com/o/Web%20I%2Fhmmm.mp4?alt=media&token=d02c9ae9-719c-44e3-a822-b53577b221b1",
+        title: "Et aliquam voluptas non quos laudantium et culpa voluptate.",
+        subtitle: "Sed dolor repudiandae non blanditiis aliquid.",
+        description:
+            "Lorem ipsum dolor sit amet. Id dolor deleniti et deleniti autem id animi natus. Est atque nobis aut vero libero At molestiae laborum et consequatur doloremque.",
+    },
+    {
+        imageUrl: "https://firebasestorage.googleapis.com/v0/b/ifmg-2bfd6.appspot.com/o/Web%20I%2Flansava.mp4?alt=media&token=741a2d84-d07f-46eb-8f40-381669aafd1d",
+        title: "Et aliquam voluptas non quos laudantium et culpa voluptate.",
+        subtitle: "Sed dolor repudiandae non blanditiis aliquid.",
+        description:
+            "Lorem ipsum dolor sit amet. Id dolor deleniti et deleniti autem id animi natus. Est atque nobis aut vero libero At molestiae laborum et consequatur doloremque.",
+    },
+    {
+        imageUrl: "https://firebasestorage.googleapis.com/v0/b/ifmg-2bfd6.appspot.com/o/Web%20I%2Fsou-bom_TwHcGYTY.mp4?alt=media&token=c94528ea-9450-463d-a936-e35708f4c048",
+        title: "Et aliquam voluptas non quos laudantium et culpa voluptate.",
+        subtitle: "Sed dolor repudiandae non blanditiis aliquid.",
+        description:
+            "Lorem ipsum dolor sit amet. Id dolor deleniti et deleniti autem id animi natus. Est atque nobis aut vero libero At molestiae laborum et consequatur doloremque.",
+    }
 ];
 
 const cardContainer = document.querySelector(".content");

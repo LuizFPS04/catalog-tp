@@ -45,33 +45,26 @@ const arrCards = [
 
 const cardContainer = document.querySelector(".content");
 
-cardContainer.innerHTML =
-`<div class="filter">
-  <span class="material-symbols-outlined" onClick="iconsShow()">transition_dissolve</span>
-  <span class="material-symbols-outlined" onClick="slideShow()">transition_slide</span>
-</div>`;
+cardContainer.innerHTML = '';
+
+let currentVideo = null;
 
 function renderCards(isSlideShow = false) {
-
-    cardContainer.innerHTML = 
-    `<div class="filter">
-        <span class="material-symbols-outlined" onClick="iconsShow()">transition_dissolve</span>
-        <span class="material-symbols-outlined" onClick="slideShow()">transition_slide</span>
-    </div>`;
+    cardContainer.innerHTML = '';
 
     arrCards.forEach((item) => {
         const cardDiv = document.createElement("div");
         cardDiv.classList.add("card");
         if (isSlideShow) cardDiv.classList.add("mySlides");
 
-        const img = document.createElement("video");
-        const src = document.createElement("source");
-        src.src = item.imageUrl;
-        src.type = "video/mp4";
-        img.controls = true;
-        img.classList.add("image-card");
-        img.appendChild(src);
-        cardDiv.appendChild(img);
+        const video = document.createElement("video");
+        const source = document.createElement("source");
+        source.src = item.imageUrl;
+        source.type = "video/mp4";
+        video.controls = true;
+        video.classList.add("image-card");
+        video.appendChild(source);
+        cardDiv.appendChild(video);
 
         const cardInfoDiv = document.createElement("div");
         cardInfoDiv.classList.add("card-info");
@@ -88,6 +81,13 @@ function renderCards(isSlideShow = false) {
         pText.textContent = item.description;
         cardInfoDiv.appendChild(pText);
         cardDiv.appendChild(cardInfoDiv);
+
+        video.addEventListener("click", () => {
+            if (currentVideo && currentVideo !== video) {
+                currentVideo.pause();
+            }
+            currentVideo = video;
+        });
 
         if (isSlideShow) {
             const previousCard = document.createElement("a");
@@ -122,6 +122,9 @@ function slideShow() {
 }
 
 function plusSlides(n) {
+    if (currentVideo) {
+        currentVideo.pause();
+    }
     showSlides(slideIndex += n);
 }
 
@@ -140,6 +143,10 @@ function applyDarkMode() {
     if (chk && chk.checked) {
         document.querySelector("header").classList.add("dark");
         document.body.classList.add("dark");
+        document.querySelector(".filter").classList.add("dark");
+        document.querySelectorAll(".icon").forEach((icon) => {
+            icon.classList.add("dark");
+        });
         document.querySelector(".content").classList.add("dark");
         document.querySelectorAll(".card").forEach((card) => {
             card.classList.add("dark");
@@ -148,6 +155,10 @@ function applyDarkMode() {
     } else {
         document.querySelector("header").classList.remove("dark");
         document.body.classList.remove("dark");
+        document.querySelector(".filter").classList.remove("dark");
+        document.querySelectorAll(".icon").forEach((icon) => {
+            icon.classList.remove("dark");
+        });
         document.querySelector(".content").classList.remove("dark");
         document.querySelectorAll(".card").forEach((card) => {
             card.classList.remove("dark");

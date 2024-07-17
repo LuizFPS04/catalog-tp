@@ -1,65 +1,81 @@
-const arrCards = [
+const CARDS = [
     {
-        imageUrl: "https://firebasestorage.googleapis.com/v0/b/ifmg-2bfd6.appspot.com/o/Web%20I%2F49432.mp4?alt=media&token=7463c840-d445-4e45-8b72-4e3739f1caae",
-        title: "Et aliquam voluptas non quos laudantium et culpa voluptate.",
-        subtitle: "Sed dolor repudiandae non blanditiis aliquid.",
-        description:
-            "Lorem ipsum dolor sit amet. Id dolor deleniti et deleniti autem id animi natus. Est atque nobis aut vero libero At molestiae laborum et consequatur doloremque.",
+        url: "https://firebasestorage.googleapis.com/v0/b/ifmg-2bfd6.appspot.com/o/Web%20I%2Fbikes.mp4?alt=media&token=5ea6323f-abad-4857-9f51-8efb17ad96eb",
+        title: "Bicicleta Matrata a Ball",
+        description: "Bicicleta efetuada por Xurrax (Luizin) na equipe do Matrata a Ball - TEMP. 22/23",
+        category: "FIFA"
     },
     {
-        imageUrl: "https://firebasestorage.googleapis.com/v0/b/ifmg-2bfd6.appspot.com/o/Web%20I%2FVID-20191105-WA0185.mp4?alt=media&token=f553b732-5804-42be-8102-55fa6e9dfd17",
-        title: "Et aliquam voluptas non quos laudantium et culpa voluptate.",
-        subtitle: "Sed dolor repudiandae non blanditiis aliquid.",
-        description:
-            "Lorem ipsum dolor sit amet. Id dolor deleniti et deleniti autem id animi natus. Est atque nobis aut vero libero At molestiae laborum et consequatur doloremque.",
+        url: "https://firebasestorage.googleapis.com/v0/b/ifmg-2bfd6.appspot.com/o/Web%20I%2Fkbs.mp4?alt=media&token=a4f6d2c5-6a88-46a6-8bde-eeeb11546c0e",
+        title: "Cabeçada",
+        description: "Cabeceio efetuado por Pirlão (Luan) jogando pelo Matrata a Ball - TEMP. 22/23",
+        category: "FIFA"
     },
     {
-        imageUrl: "https://firebasestorage.googleapis.com/v0/b/ifmg-2bfd6.appspot.com/o/Web%20I%2Fanime_1709043377457.mp4?alt=media&token=b4b05ace-e0f5-4ba8-9114-c01e86801a66",
-        title: "Et aliquam voluptas non quos laudantium et culpa voluptate.",
-        subtitle: "Sed dolor repudiandae non blanditiis aliquid.",
-        description:
-            "Lorem ipsum dolor sit amet. Id dolor deleniti et deleniti autem id animi natus. Est atque nobis aut vero libero At molestiae laborum et consequatur doloremque.",
+        url: "https://firebasestorage.googleapis.com/v0/b/ifmg-2bfd6.appspot.com/o/Web%20I%2Fpedrin%20gol%20livre.mp4?alt=media&token=2c89c7e9-9a5d-4e15-bd7a-301730c35a81",
+        title: "Bagre PT1",
+        description: "Apenas um bagre - Matrata a Ball - TEMP. 22/23",
+        category: "FIFA"
     },
     {
-        imageUrl: "https://firebasestorage.googleapis.com/v0/b/ifmg-2bfd6.appspot.com/o/Web%20I%2Fhmmm.mp4?alt=media&token=d02c9ae9-719c-44e3-a822-b53577b221b1",
-        title: "Et aliquam voluptas non quos laudantium et culpa voluptate.",
-        subtitle: "Sed dolor repudiandae non blanditiis aliquid.",
-        description:
-            "Lorem ipsum dolor sit amet. Id dolor deleniti et deleniti autem id animi natus. Est atque nobis aut vero libero At molestiae laborum et consequatur doloremque.",
+        url: "https://firebasestorage.googleapis.com/v0/b/ifmg-2bfd6.appspot.com/o/Web%20I%2FxutaFofo.mp4?alt=media&token=54dbd12f-21db-45ea-bc4f-e07418bc98a7",
+        title: "Bagre PT2",
+        description: "Novamente um bagre - Matrata a Ball - TEMP. 22/23",
+        category: "FIFA"
     },
     {
-        imageUrl: "https://firebasestorage.googleapis.com/v0/b/ifmg-2bfd6.appspot.com/o/Web%20I%2Flansava.mp4?alt=media&token=741a2d84-d07f-46eb-8f40-381669aafd1d",
-        title: "Et aliquam voluptas non quos laudantium et culpa voluptate.",
-        subtitle: "Sed dolor repudiandae non blanditiis aliquid.",
-        description:
-            "Lorem ipsum dolor sit amet. Id dolor deleniti et deleniti autem id animi natus. Est atque nobis aut vero libero At molestiae laborum et consequatur doloremque.",
+        url: "https://firebasestorage.googleapis.com/v0/b/ifmg-2bfd6.appspot.com/o/Web%20I%2Ftop1%20gol%20matrata%20a%20ball.mp4?alt=media&token=098ee6a6-37ec-46dc-a9a7-48cccdefcf76",
+        title: "Golaço",
+        description: "De acordo com o autor do gol, esse foi o mais bonito da temporada - Matrata a Ball - TEMP. 22/23",
+        category: "FIFA"
     },
     {
-        imageUrl: "https://firebasestorage.googleapis.com/v0/b/ifmg-2bfd6.appspot.com/o/Web%20I%2Fsou-bom_TwHcGYTY.mp4?alt=media&token=c94528ea-9450-463d-a936-e35708f4c048",
-        title: "Et aliquam voluptas non quos laudantium et culpa voluptate.",
-        subtitle: "Sed dolor repudiandae non blanditiis aliquid.",
-        description:
-            "Lorem ipsum dolor sit amet. Id dolor deleniti et deleniti autem id animi natus. Est atque nobis aut vero libero At molestiae laborum et consequatur doloremque.",
+        url: "https://firebasestorage.googleapis.com/v0/b/ifmg-2bfd6.appspot.com/o/Web%20I%2Fvoleio%20omniMan.mp4?alt=media&token=20175f12-fc98-4c68-bc67-5bb26d7ac373",
+        title: "Voador",
+        description: "OmniMan (Luan) a voar - Matrata a Ball - TEMP. 23/24",
+        category: "FIFA"
+    },
+    {
+        url: "https://firebasestorage.googleapis.com/v0/b/ifmg-2bfd6.appspot.com/o/Web%20I%2FAce%20Judge%20Skye.mp4?alt=media&token=4b354df1-51f0-4da4-9463-1dd3599292b8",
+        title: "ACE",
+        description: "Ace Judge da Skye aí - Vava",
+        category: "Valorant"
+    },
+    {
+        url: "https://firebasestorage.googleapis.com/v0/b/ifmg-2bfd6.appspot.com/o/Web%20I%2Fclutch%201x4%20omen.mp4?alt=media&token=fa17a4be-6373-4178-839c-4ce73b8138f4",
+        title: "Clutch do Omen",
+        description: "Clutch 1x4 - Vava",
+        category: "Valorant"
+    },
+    {
+        url: "https://firebasestorage.googleapis.com/v0/b/ifmg-2bfd6.appspot.com/o/Web%20I%2Fviper%201x3%20icebox.mp4?alt=media&token=d11e1f6b-6d3e-492a-b366-a4b95ec033a5",
+        title: "Víper",
+        description: "Víper 1x3 - Vava",
+        category: "Valorant"
+    },
+    {
+        url: "https://firebasestorage.googleapis.com/v0/b/ifmg-2bfd6.appspot.com/o/Web%20I%2Fyoru%20clutch%20v2%20bind.mp4?alt=media&token=7ce4f452-fdf0-4a14-b840-733b5220e739",
+        title: "Clutch in the final",
+        description: "Clutch da fera - Vava",
+        category: "Valorant"
     }
 ];
 
 const cardContainer = document.querySelector(".content");
 
-cardContainer.innerHTML = '';
-
 let currentVideo = null;
+let isSlideShow = false;
 
-function renderCards(isSlideShow = false) {
+function renderCards(cards = CARDS) {
     cardContainer.innerHTML = '';
-
-    arrCards.forEach((item) => {
+    cards.forEach((item) => {
         const cardDiv = document.createElement("div");
         cardDiv.classList.add("card");
         if (isSlideShow) cardDiv.classList.add("mySlides");
 
         const video = document.createElement("video");
         const source = document.createElement("source");
-        source.src = item.imageUrl;
+        source.src = item.url;
         source.type = "video/mp4";
         video.controls = true;
         video.classList.add("image-card");
@@ -72,10 +88,6 @@ function renderCards(isSlideShow = false) {
         const h2Title = document.createElement("h2");
         h2Title.textContent = item.title;
         cardInfoDiv.appendChild(h2Title);
-
-        const h4Subtitle = document.createElement("h4");
-        h4Subtitle.textContent = item.subtitle;
-        cardInfoDiv.appendChild(h4Subtitle);
 
         const pText = document.createElement("p");
         pText.textContent = item.description;
@@ -111,16 +123,52 @@ function renderCards(isSlideShow = false) {
 }
 
 function iconsShow() {
+    isSlideShow = false;
     renderCards();
 }
 
-let slideIndex = 1;
-
-function slideShow() {
-    renderCards(true);
+function slideShow(cards = CARDS) {
+    console.log(cards)
+    isSlideShow = true;
+    renderCards(cards);
     showSlides(slideIndex);
 }
 
+document.querySelectorAll('header img').forEach(img => {
+    img.addEventListener('click', (e) => {
+        const category = e.target.getAttribute('data-category');
+        filterByCategory(category);
+    });
+});
+
+function changeImage() {
+    let image = document.querySelectorAll("img");
+    const chk = document.getElementById("chk");
+
+    if (chk && chk.checked) {
+        image.forEach((img) => {
+            let imageSrc = img.src;
+            img.src = imageSrc.includes("-white.png") ? imageSrc : imageSrc.replace(".png", "-white.png");
+        })
+    } else {
+        image.forEach((img) => {
+            let imageSrc = img.src;
+            img.src = imageSrc.replace("-white.png", ".png");
+        })
+    }
+}
+
+function filterByCategory(category) {
+    console.log(category)
+    const filteredCards = category === "All" ? CARDS : CARDS.filter(card => card.category === category);
+    if (isSlideShow) {
+        slideShow(filteredCards);
+    } else {
+        renderCards(filteredCards);
+    }
+}
+
+let slideIndex = 1;
 function plusSlides(n) {
     if (currentVideo) {
         currentVideo.pause();
@@ -141,9 +189,10 @@ function showSlides(n) {
 function applyDarkMode() {
     const chk = document.getElementById("chk");
     if (chk && chk.checked) {
+        changeImage();
         document.querySelector("header").classList.add("dark");
         document.body.classList.add("dark");
-        document.querySelector(".filter").classList.add("dark");
+        document.querySelector(".view-mode").classList.add("dark");
         document.querySelectorAll(".icon").forEach((icon) => {
             icon.classList.add("dark");
         });
@@ -153,9 +202,10 @@ function applyDarkMode() {
         });
         document.querySelector(".footer").classList.add("dark");
     } else {
+        changeImage();
         document.querySelector("header").classList.remove("dark");
         document.body.classList.remove("dark");
-        document.querySelector(".filter").classList.remove("dark");
+        document.querySelector(".view-mode").classList.remove("dark");
         document.querySelectorAll(".icon").forEach((icon) => {
             icon.classList.remove("dark");
         });

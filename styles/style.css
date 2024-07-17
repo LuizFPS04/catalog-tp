@@ -1,3 +1,4 @@
+/* Basic reste*/
 html,
 body {
     margin: 0;
@@ -9,6 +10,7 @@ body {
     transition: background 0.2s linear;
 }
 
+/* Body styles*/
 body {
     display: flex;
     flex-direction: column;
@@ -17,6 +19,7 @@ body {
     background-color: #FAFAFA;
 }
 
+/* Header styles*/
 header {
     width: 100%;
     display: flex;
@@ -27,6 +30,30 @@ header {
     background-color: #EEEEEE;
     padding: 10px 20px;
     transition: background 0.2s linear;
+}
+
+header #left {
+    display: flex;
+    align-items: center;
+}
+
+header #left img {
+    width: 40px;
+    margin: 0 8px;
+}
+
+header .logo img {
+    width: 70px;
+    max-height: 70px;
+}
+
+header img {
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+header img:hover {
+    transform: scale(1.5);
 }
 
 header .logo {
@@ -44,12 +71,13 @@ header span {
     text-align: center;
 }
 
+/* Checkbox styles*/
 .checkbox {
     display: none;
 }
 
 .label {
-    margin-right: 2.5%;
+    margin-right: 5%;
     background-color: #111;
     border-radius: 36px;
     cursor: pointer;
@@ -95,31 +123,33 @@ header span {
     align-items: center;
 }
 
-.filter {
+.view-mode {
     display: flex;
     gap: 8px;
     padding: 10px;
-    margin: 60px 20px 20px 20px;
+    margin: 100px 20px 10px 20px;
     justify-content: flex-end;
+    align-items: center;
 }
 
-.filter .icon {
+.view-mode .icon {
     cursor: pointer;
     font-size: 1.5rem;
     transition: transform 0.2s ease-in-out;
 }
 
-.filter .icon:hover {
+.view-mode .icon:hover {
     transform: scale(1.2);
     background-color: #f0f0f0;
     padding: 8px;
     border-radius: 30px;
 }
 
+/* Content styles*/
 .content {
     flex: 1;
     width: 100%;
-    background-color: #FAFAFA;
+    background-color: #F7F7F7;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -128,10 +158,7 @@ header span {
     transition: background 0.2s linear;
 }
 
-.filter {
-    cursor: pointer;
-}
-
+/* Card styles*/
 .card {
     background-color: #FFF;
     border-radius: 8px;
@@ -141,46 +168,43 @@ header span {
     box-shadow: 0 1px 10px 0 #E1E7EE;
     z-index: 1;
     text-align: center;
-    width: 90%;
-    max-width: 800px;
-    height: auto;
-    float: left;
-}
-
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
+    max-width: calc(33.33% - 30px);
+    width: 100%;
+    margin-bottom: 30px; 
 }
 
 .card .image-card {
     border-radius: 12px;
-    width: 800px;
-    max-height: 450px;
-    border: 3px solid;
-    border-image: linear-gradient(to left, #000, #2B2B2B, #818181, #B3B3B3);
-    border-image-slice: 2;
+    max-width: 100%;
+    height: auto;
 }
 
 .card-info h2 {
     font-size: 18px;
     font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.card-info h4 {
-    font-size: 16px;
-    margin-bottom: 10px;
-    font-weight: 400;
 }
 
 .card-info p {
     font-size: 12px;
-    line-height: 1.6;
+}
+
+.card video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.card video:hover {
+    transform: scale(1.075);
 }
 
 .mySlides {
-    display: none
+    display: none;
+    max-width: 600px;
 }
 
 .previous,
@@ -204,33 +228,70 @@ header span {
     transform: scale(1.2);
 }
 
-.card img {
-    width: 30%;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-
-.footer {
+/* Footer styles*/
+footer {
     background-color: #EEEEEE;
     color: #333;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
-    justify-content: center;
     padding: 10px 20px;
     flex-shrink: 0;
-    margin-top: auto;
+    margin-top: 20px;
     height: auto;
     transition: background 0.2s linear;
 }
 
-.footer img {
-    width: 35px;
-    height: 35px;
-    margin-top: 15px;
+footer #left-footer {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.5s ease;
 }
 
+footer #left-footer img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+footer #left-footer:hover {
+    transform: scale(1.1);
+}
+
+footer #right-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+footer #right-footer h3 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+footer #right-footer h3 a {
+    margin: 0 8px;
+}
+
+footer #right-footer h3 img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.5s ease;
+    display: block;
+}
+
+footer #right-footer h3 img:hover {
+    transform: scale(1.1);
+}
+
+/* Dark mode*/
 body.dark {
     background-color: #424242;
 }
@@ -240,11 +301,11 @@ header.dark {
     color: #E1E7EE;
 }
 
-.filter.dark {
+.view-mode.dark {
     color: #E1E7EE;
 }
 
-.filter .icon.dark:hover {
+.view-mode .icon.dark:hover {
     transform: scale(1.2);
     background-color: #585858;
     padding: 8px;
